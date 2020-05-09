@@ -1,0 +1,40 @@
+version: "3.7"
+services:
+  db-server:
+    container_name: db-server
+    image: mongo:4.2.5-bionic
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - dbdata:/data/db
+    networks:
+      - app-network
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongo db-server:27017/test --quiet 1
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
+
+  api-server:
+    container_name: api-server
+    build: .
+    restart: unless-stopped
+    volumes:
+      - "./src:/usr/src/app/src"
+      - "./index.js:/usr/src/app/index.js"
+    ports:
+      - "4000:4000"
+    networks:
+      - app-network
+    links:
+      - db-server
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  dbdata:
+  node_modules:

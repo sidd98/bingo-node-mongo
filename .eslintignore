@@ -1,0 +1,10 @@
+/node_modules/*
+/coverage/*
+/out/*
+*.log
+*.log.*
+*.bak
+npm-debug.*
+/swagger/*
+data/*
+Logs*
