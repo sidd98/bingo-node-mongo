@@ -19,6 +19,5 @@ connectAsync(mongoDb.url, mongoDb.options,)
         expressApp.listen(config.get('env.port',),);
     },)
     .catch((error,) => {
-        console.log('############error', error,);
         throw error;
     },);

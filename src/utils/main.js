@@ -1,5 +1,4 @@
 const { gameModels, } = require('../modules/game',);
-
 exports.getUsedNumber = async (game_id,) => {
     const data = await gameModels.getUsedNumbers(game_id,);
     let pickedNumbers = [];

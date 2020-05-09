@@ -1,7 +1,5 @@
 /* eslint-disable no-underscore-dangle */
 const { gameModels, } = require('../../modules/game',);
-
-
 exports.generateNumbers = async () => {
     const arr = [];
     while (arr.length < 90) {

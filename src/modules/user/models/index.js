@@ -3,7 +3,6 @@ const userModel = require('./userModel',);
 
 const { ObjectId, } = mongoose.Types;
 
-
 /**
  * create a new user
  * @returns {Promise} - resolve with data or reject with error

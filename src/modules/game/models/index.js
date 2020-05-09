@@ -1,7 +1,6 @@
 const mongoose = require('mongoose',);
 const gameModel = require('./gameModel',);
 
-
 /**
  * create a new game
  * @returns {Promise} - resolve with data or reject with error

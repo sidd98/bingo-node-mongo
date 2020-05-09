@@ -12,7 +12,7 @@ exports.get = async (req, res,) => {
             },);
         }
         res.send({
-            Message: 'No number picked yet ir check if game exist or not',
+            Message: 'No number picked yet or check if game exist or not',
         },);
     } catch (err) {
         res.status(500,).send(err,);

@@ -1,7 +1,6 @@
 const _ = require('lodash',);
 const { gameModels, } = require('../../modules/game',);
 
-
 exports.getRandomNumber = async (req, res,) => {
     const { game_id, } = req.params;
 
