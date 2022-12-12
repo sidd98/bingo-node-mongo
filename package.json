@@ -22,7 +22,7 @@
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-smells": "^1.0.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "hbs": "^4.1.1",
     "http-status-codes": "^1.4.0",
     "lint": "^0.7.0",
